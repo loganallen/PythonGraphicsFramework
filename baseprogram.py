@@ -1,11 +1,8 @@
-# Program Base!!!
-
 import pygame
 import random
 import math
 import sys
 from pygame.locals import *
-
 
 # Initialize pygame
 pygame.init()
@@ -18,8 +15,7 @@ pygame.display.set_caption("Python Using Pygame")
 main_clock = pygame.time.Clock()
 
 
-# _________ Instantiate variables here _________ #
-##################################################
+# _________ Declare variables here _________ #
 
 # Create background color
 background_color = (255,255,255)
@@ -43,7 +39,6 @@ enemy_speed = 3
 
 
 #  ___________ Create Methods below __________ #
-################################################
 
 def draw_text(display_string, font, surface, coordinates, color):
     text_display = font.render(display_string, 1, color)
@@ -54,7 +49,6 @@ def draw_text(display_string, font, surface, coordinates, color):
 while True:
 
     # _____________ Check for events _____________ #
-    ################################################
 
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -93,7 +87,6 @@ while True:
 
 
     # __________ Begin graphical displays ________ #
-    ################################################
 
     # Set the framerate speed
     main_clock.tick(50)
@@ -102,7 +95,6 @@ while True:
 
 
     # ____________ Draw objects below ____________ #
-    ################################################
 
     # Draw enemy rectangle with black outline
     pygame.draw.rect(screen,(150,0,0),enemy,0)
@@ -118,12 +110,7 @@ while True:
 
 
 
-
-
-
-
     # ___________ Animate objects below __________ #
-    ################################################
 
     # AI movement of enemy back and forth
     if enemy_right:
@@ -146,9 +133,6 @@ while True:
         player.y -=player_speed
     elif player_down and player.bottom <= screen_height:
         player.y += player_speed
-
-
-
 
 
 
